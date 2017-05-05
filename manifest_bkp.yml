@@ -1,0 +1,15 @@
+---
+declared-services:
+  Watson Conversation Service:
+    label: conversation
+    plan: free
+applications:
+- name: Chatbot-IOT-Expo
+  command: npm start
+  path: .
+  memory: 512M
+  instances: 1
+  services:
+  - Conversation-Expo
+  env:
+    NPM_CONFIG_PRODUCTION: false
